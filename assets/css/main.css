@@ -92,7 +92,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #9D0208; /*#312450;*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2521,7 +2521,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #D00000;/* #312450; */
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -2531,28 +2531,28 @@ input, select, textarea {
 				font-size: 1.25em;
 			}
 
-				.wrapper.style1 .icon.major:before {
-					color: #5e42a6;
-				}
-
-				.wrapper.style1-alt .icon.major:before {
-					color: #493382;
-				}
-
 				.wrapper.style2 .icon.major:before {
-					color: #5052b5;
+					color: #9D0208;/* #5e42a6; */
 				}
 
 				.wrapper.style2-alt .icon.major:before {
-					color: #3e4094;
+					color: #9D0208; /* #493382; */
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: #b74e91;
+					color: #D00000; /* #5052b5; */
 				}
 
 				.wrapper.style3-alt .icon.major:before {
-					color: #953d75;
+					color: #D00000; /* #3e4094; */
+				}
+
+				.wrapper.style3 .icon.major:before {
+					color: #E85D04; /* #b74e91; */
+				}
+
+				.wrapper.style3-alt .icon.major:before {
+					color: #E85D04; /* #953d75; */
 				}
 
 /* Image */
@@ -3232,31 +3232,31 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #261c3e;
-		}
-
-		.wrapper.style1 {
-			background-color: #5e42a6;
-		}
-
-		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #9D0208;
 		}
 
 		.wrapper.style2 {
-			background-color: #5052b5;
+			background-color: #9D0208;/* #5e42a6; */
 		}
 
 		.wrapper.style2-alt {
-			background-color: #3e4094;
+			background-color: #9D0208; /* #493382; */
+		}
+
+		.wrapper.style1 {
+			background-color: #FAA307; /* #5052b5; */
+		}
+
+		.wrapper.style1-alt {
+			background-color: #FAA307; /* #3e4094; */
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #E85D04; /* #b74e91; */
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: #E85D04; /* #953d75; */
 		}
 
 		.wrapper.fullscreen {
@@ -3366,7 +3366,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #370617; /* #5e42a6; */
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3458,10 +3458,10 @@ input, select, textarea {
 
 		}
 
-/* Wrapper (main) */
-
+/* Wrapper (main) = what we separes the sidebar of the body */
+	/* width of the solid color */
 	#sidebar + #wrapper {
-		margin-left: 18em;
+		margin-left: 9em;
 	}
 
 		@media screen and (max-width: 1280px) {
@@ -3519,17 +3519,17 @@ input, select, textarea {
 /* Sidebar */
 
 	#sidebar {
-		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		/* padding: 2.5em 2.5em 0.5em 2.5em ; */
+		background: #000000; /* #312450; */
 		cursor: default;
 		height: 100vh;
 		left: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
-		width: 18em;
+		width: 9em;
 		z-index: 10000;
 	}
 
@@ -3558,6 +3558,12 @@ input, select, textarea {
 			opacity: 1;
 			width: 100%;
 		}
+
+		.logo-sidebar {
+			margin-bottom: auto;
+			margin-top: 0.6em;
+			padding: auto;
+		}		
 
 			body.is-ie #sidebar > .inner {
 				height: 100%;
@@ -3757,14 +3763,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #000000; /* #3c2c62; */
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #370617, #DC2F02/*#5e42a6, #b74e91*/);
+				background-image: -webkit-linear-gradient(to right, #370617, #DC2F02);
+				background-image: -ms-linear-gradient(to right, #370617, #DC2F02);
+				background-image: linear-gradient(to right, #370617, #DC2F02);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3822,10 +3828,19 @@ input, select, textarea {
 					line-height: inherit;
 				}
 
+				.logo-sidebar {
+					margin-top: 0.6em;
+					margin-right: auto;
+					margin-left: 0.5em;
+					/* left: 0em;
+					top: 0em; */
+				}		
+
 				#sidebar nav {
 					height: inherit;
 					line-height: inherit;
 				}
+
 
 					#sidebar nav ul {
 						display: -moz-flex;
@@ -3852,28 +3867,35 @@ input, select, textarea {
 					}
 
 						#sidebar nav a:after {
-							background-image: none;
-							background-color: #b74e91;
+							background-image: -moz-linear-gradient(to right, #370617, #DC2F02/*#5e42a6, #b74e91*/);
+							background-image: -webkit-linear-gradient(to right, #370617, #DC2F02);
+							background-image: -ms-linear-gradient(to right, #370617, #DC2F02);
+							background-image: linear-gradient(to right, #370617, #DC2F02);
 						}
 
 		}
 
 		@media screen and (max-width: 736px) {
 
+			/* I want the sidebar to be displayed always
 			#sidebar {
-				display: none;
+				 display: none; 
 			}
+			*/
 
 		}
 
 /* Intro */
 
 	#intro {
-		background-attachment: fixed;
-		background-image: url("images/intro.svg");
-		background-position: top right;
+		background-attachment: local;
+		/* background-image: url("images/intro.svg"); */
+		background-image: url("images/profile.jpg");
+		background-size: max(1600, 100%);
+		background-color: #6A040F;
+		background-position: top center;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		/* background-size: 100% 100%; */
 	}
 
 		#intro p {

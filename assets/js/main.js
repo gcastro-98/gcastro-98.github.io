@@ -50,7 +50,7 @@
 			var $sidebar_a = $sidebar.find('a');
 
 			$sidebar_a
-				.addClass('scrolly')
+				/* .addClass('scrolly') */
 				.on('click', function() {
 
 					var $this = $(this);
@@ -113,7 +113,7 @@
 
 		}
 
-	// Scrolly.
+	/* // Scrolly.
 		$('.scrolly').scrolly({
 			speed: 1000,
 			offset: function() {
@@ -127,7 +127,7 @@
 				return 0;
 
 			}
-		});
+		}); */
 
 	// Spotlights.
 		$('.spotlights > section')

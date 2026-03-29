@@ -1,95 +1,283 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title> Gerard Castro | AI | Maths | Physics </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description"
-    content="Sleepless coder in love of maths, physics, modelling & computers.">
-  <meta name="keywords"
-    content="C3S,ECMWF,seasonal,forecasting,data,science,data-science,AI,ml,deep-learning,dl,maths,physics">
-  <meta name="author" content="Gerard Castro">
-  <link rel="icon" href="img/logo/icon_darkmode.png">
-
-  <!-- Control appearance when shared by social media -->
-  <meta property="og:title" content="Gerard Castro | AI | Maths | Physics" />
-  <meta property="og:image" content="img/logo/icon_darkmode.png" />
-  <meta property="og:description"
-    content="Welcome to Gerard Castro's personal page. I consider myself a seasonal forecasting specialist with a background in mathematics, physics and data science" />
-  <meta property='og:url' content="https://gcastro-98.github.io" />
-  <meta property="og:type" content="website" />
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  
-  <!-- Custom styles for this template -->
-  <link href="css/agency.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerard Castro Castillo - Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="page-top" class="dark">
+<body>
+    <!-- Interactive Background -->
+    <div class="canvas-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
 
-  <!-- =======================  LANDING SECTION ======================= -->
-
-  <header class="masthead">
-    <div id="background-effect"></div>
-    
-    <div class="textlanding">
-        <p style="display:inline; font-size: 35px">GERARD CASTRO</p>
-        <br><br>
-        <ul class="list-inline social-buttons">
-        <li class="list-inline-item social-buttons">
-            <a href="https://github.com/gcastro-98">
-                <i class="fa fa-github" style="color: white"></i>
-            </a>
-            </li>
-        <li class="list-inline-item social-buttons">
-            <a href="https://www.linkedin.com/in/gcastro98/">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            </li>
-        <li class="list-inline-item">
-            <a href="https://twitter.com/gcastro_98">
-            <i class="fa fa-twitter"></i>
-            </a>
-        </li>
+    <!-- Timeline Sidebar -->
+    <nav class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-indicator" id="indicator"></div>
+        <ul>
+            <li><a href="#about" class="active" data-section="about">About</a></li>
+            <li><a href="#experience" data-section="experience">Experience</a></li>
+            <li><a href="#education" data-section="education">Education</a></li>
+            <li><a href="#skills" data-section="skills">Skills</a></li>
         </ul>
-      
-        <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
-        <p>Sleepless coder in love of maths, physics, modelling & computers... No wonder why we started <a href="https://linkedin.com/company/nebbo-weather"><img src="img/logo-small.png" alt="Nebbo" width="75" style="margin-top: -5px;"/></a> right?</p>
-        <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
-        
-        <div id="sharingan">
-            <img src="img/logo/icon_darkmode.png" style="width: 90px; height: 90px;">
-        </div>
-    
+    </nav>
+
+    <!-- Main Content Wrapped in Scroll Snapper -->
+    <div class="snap-container" id="snap-container">
+        <main class="content">
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="sidebar-title">
+                    <h2>ABOUT ME</h2>
+                </div>
+                <div class="section-content about-grid">
+                    <img src="img/profile.jpg" alt="Profile" class="profile-pic">
+                    <div class="hero-titles">
+                        <h1 class="hero-name">Gerard Castro</h1>
+                        <h3 class="hero-role">Co-founder & CTO @ <a href="https://nebbo-weather.com/" target="_blank"
+                                class="nebbo-link">Nebbo</a></h3>
+                    </div>
+                    <p class="summary-text">
+                        With a strong foundation in Mathematics, Physics & Data Science; I am very passionate about
+                        driving innovation and deploying state-of-the-art solutions to create lasting, positive impact.
+                        Co-founding Nebbo has given me the opportunity to apply my expertise in computing, mathematical
+                        modelling, AI architecture, and team leadership.
+                    </p>
+                    <div class="quick-links">
+                        <a href="https://www.linkedin.com/in/gcastro98" target="_blank" class="btn">LinkedIn</a>
+                        <a href="https://github.com/gcastro-98" target="_blank" class="btn">GitHub</a>
+                        <a href="mailto:gerardc98@gmail.com" class="btn">Email</a>
+                        <a href="cv.pdf" target="_blank" class="btn btn-outline">Download CV</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <div class="sidebar-title">
+                    <h2>EXPERIENCE</h2>
+                </div>
+                <div class="section-content experience-grid">
+
+                    <div class="job">
+                        <div class="job-header">
+                            <img src="img/nebbo.png" alt="Nebbo Logo" class="job-logo nebbo-logo">
+                            <div class="job-meta">
+                                <h3>Chief Technical Officer</h3>
+                                <span class="company"><a href="https://nebbo-weather.com/" target="_blank">Nebbo Weather
+                                        Solutions</a></span>
+                                <span class="date">Jan 2024 - Present | Barcelona, Spain</span>
+                            </div>
+                        </div>
+                        <p class="job-description">Directing company's technical vision, R&D, and engineering teams.</p>
+                        <ul class="job-tasks">
+                            <li><strong>Tasks:</strong> AI architecture design, product ownership, and driving strategic
+                                initiatives including funding, market expansion, equity, and customer engagement.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <img src="img/vortex.png" alt="Vortex Logo" class="job-logo">
+                            <div class="job-meta">
+                                <h3>R&D Data Scientist</h3>
+                                <span class="company"><a href="https://vortexfdc.com/" target="_blank">Vortex
+                                        FdC</a></span>
+                                <span class="date">May 2021 - Jan 2024 | Barcelona, Spain</span>
+                            </div>
+                        </div>
+                        <p class="job-description">Lead developer of the seasonal forecasting product.</p>
+                        <ul class="job-tasks">
+                            <li><strong>Tasks:</strong> ETL process of C3S (sub)seasonal models, ensemble systems'
+                                calibration and AI post-processing using statistical, on-demand deployment (interface
+                                and an API)...</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <img src="img/clinicgram.png" alt="ClinicGram Logo" class="job-logo">
+                            <div class="job-meta">
+                                <h3>Deep Learning Expert</h3>
+                                <span class="company"><a href="https://www.clinicgram.com/"
+                                        target="_blank">Clinicgram</a></span>
+                                <span class="date">Jun 2022 - Sep 2022 | Barcelona, Spain</span>
+                            </div>
+                        </div>
+                        <p class="job-description">Leading the development of the chronic wound diagnosis project.</p>
+                        <ul class="job-tasks">
+                            <li><strong>Tasks:</strong> applied discriminative AI for medical image annotation using
+                                ViT, implemented chronic wound risk prognostic using ML classifiers and thermal image...
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <div class="sidebar-title">
+                    <h2>EDUCATION</h2>
+                </div>
+                <div class="section-content education-grid">
+                    <div class="degree">
+                        <h3>MSc in Data Science</h3>
+                        <span class="institution">University of Barcelona | 2022 - 2024</span>
+                        <p>Grade: <strong>9.13/10.00</strong>. <br>
+                            <a href="https://gcastro-98.github.io/conformal-prediction-media/thesis.pdf" target="_blank"
+                                class="accent-link">MSc Thesis</a> with honors on distribution-free model-agnostic
+                            uncertainty quantification (<a
+                                href="https://gcastro-98.github.io/conformal-prediction-media/slides.pdf"
+                                target="_blank" class="accent-link">Presentation</a>, <a
+                                href="https://github.com/gcastro-98/conformal-prediction" target="_blank"
+                                class="accent-link">Repo</a>).
+                        </p>
+                    </div>
+
+                    <div class="degree">
+                        <h3>BSc in Mathematics</h3>
+                        <span class="institution">Autonomous University of Barcelona | 2016 - 2021</span>
+                        <p>Honors in Computing & programming, Galois Theory, and Differential Geometry.</p>
+                    </div>
+
+                    <div class="degree">
+                        <h3>BSc in Physics</h3>
+                        <span class="institution">Autonomous University of Barcelona | 2016 - 2021</span>
+                        <p>Honors in Chemistry and Numerical PDE Integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="sidebar-title">
+                    <h2>SKILLS</h2>
+                </div>
+                <div class="section-content skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <p>Python, bash, SQL, R, C</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Analysis Toolkit</h3>
+                        <p>numpy, pandas, scipy, xarray, dash, PIL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>ML & DL Toolkit</h3>
+                        <p>scikit-learn, OpenCV, statsmodels, Keras, Tensorflow, Pytorch</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Other</h3>
+                        <p>GCP suite, HPC architecture design, FastAPI, Plotly, git, cdo, ncview, MongoDB, MySQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Native-level languages</h3>
+                        <p>Catalan, Spanish, English</p>
+                    </div>
+
+                    <div class="interests-container">
+                        <h3>Interests & Passions</h3>
+                        <ul class="interests-list">
+                            <li><strong>Academic:</strong> Trustworthy XAI, uncertainty-aware modeling, physics-informed
+                                NN</li>
+                            <li><strong>Personal:</strong> BJJ, diving, coding for fun, data science competitions
+                                (Kaggle), fiction literature</li>
+                            <li><strong>Communication:</strong> Guest speaker at UViC, investor & accelerator pitches,
+                                technical conferences (e.g. Wind Europe Technology Workshop)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     </div>
-    
-    <!-- Contact buttons -->
-    <!--  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#description">Visit</a>
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
-    </div>
-    <div class="arrowlanding">
-      <a class="js-scroll-trigger" href="#description">
-        <p style="font-size: 80px; color: #69b3a2">&#xfe40;</p>
-      </a>
-    </div> -->
 
-  </header>
+    <!-- Three.js Interactive Mesh Gradient Physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform float uTime;
+        uniform vec2 uMouse;
+        uniform vec2 uResolution;
+        varying vec2 vUv;
 
+        vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
 
-  <!-- scripts -->
-  <!-- <script src="sharingan.js"></script>  <!-- sharingan rotation --> -->
-  <!-- <script src="theme_toggle.js"></script>  <!-- dark/light toggle -->
-  <script src="js/particles.js"></script>
-  <script src="js/appHome.js"></script>
+        float snoise(vec2 v) {
+            const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+            vec2 i  = floor(v + dot(v, C.yy) );
+            vec2 x0 = v -   i + dot(i, C.xx);
+            vec2 i1; i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+            vec4 x12 = x0.xyxy + C.xxzz; x12.xy -= i1;
+            i = mod289(i);
+            vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+            vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+            m = m*m; m = m*m;
+            vec3 x = 2.0 * fract(p * C.www) - 1.0;
+            vec3 h = abs(x) - 0.5; vec3 ox = floor(x + 0.5); vec3 a0 = x - ox;
+            m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+            vec3 g; g.x  = a0.x  * x0.x  + h.x  * x0.y; g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+            return 130.0 * dot(m, g);
+        }
 
-  <!-- ======================================================================= -->
+        void main() {
+            vec2 pos = vUv * 2.0; 
+            
+            // Mouse Interaction physics (Soft, broad UV distortion)
+            vec2 m = uMouse / uResolution;
+            m.y = 1.0 - m.y; // Correct typical Y inversion
+            
+            vec2 d = vUv - m;
+            float dist = length(d);
+            
+            // Use a bell curve (Gaussian) for a broad soft area
+            float mouseEffect = exp(-dist * dist * 5.0);
+            
+            // By multiplying by 'd' instead of normalize(d), the displacement naturally
+            // goes to zero at the exact center, completely eliminating the sharp pinch/focal point.
+            pos += d * mouseEffect * 1.2; 
+
+            float t = uTime * 0.2;
+            
+            // Generate multiple noise octaves
+            float noise1 = snoise(pos + t);
+            float noise2 = snoise(pos * 1.5 - t * 0.5);
+            float noise3 = snoise(pos * 0.8 + vec2(t, -t));
+            
+            // Nebbo Palette Vectors
+            vec3 c1 = vec3(0.882, 0.259, 0.235); // #E1423C (Red)
+            vec3 c2 = vec3(0.941, 0.529, 0.196); // #F08732 (Orange)
+            vec3 c3 = vec3(0.000, 0.588, 0.627); // #0096A0 (Teal)
+            vec3 c4 = vec3(0.510, 0.804, 0.902); // #82CDE6 (Cyan)
+            
+            // Blend them smoothly using the noise octaves
+            vec3 colorMix = mix(c1, c2, smoothstep(-0.8, 0.8, noise1));
+            colorMix = mix(colorMix, c3, smoothstep(-0.5, 0.9, noise2));
+            colorMix = mix(colorMix, c4, smoothstep(-0.9, 0.6, noise3));
+            
+            gl_FragColor = vec4(colorMix, 1.0);
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

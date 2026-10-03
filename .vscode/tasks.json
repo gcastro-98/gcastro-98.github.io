@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // Static server: the shan-shui Web Worker does not load from file://
+            "label": "serve-portfolio",
+            "type": "shell",
+            "command": "python3 -u -m http.server 8791 --bind 127.0.0.1",
+            "isBackground": true,
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": { "reveal": "silent", "panel": "dedicated" },
+            "problemMatcher": {
+                "owner": "serve-portfolio",
+                "pattern": { "regexp": "^__never_matches__$" },
+                "background": {
+                    "activeBegins": true,
+                    "beginsPattern": "^Serving HTTP",
+                    "endsPattern": "^Serving HTTP"
+                }
+            }
+        },
+        {
+            "label": "stop-portfolio-server",
+            "type": "shell",
+            "command": "echo ${input:terminateServer}",
+            "presentation": { "reveal": "never" },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "terminateServer",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "serve-portfolio"
+        }
+    ]
+}

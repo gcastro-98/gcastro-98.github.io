@@ -38,6 +38,27 @@ body {
     height: 100%;
 }
 
+/* Shan-shui background: bitmap tiles rendered by shanshui/worker.js, already in "night ink"
+   colours (no CSS filter / blend, which the compositor would re-apply every frame) */
+.canvas-container.shanshui {
+    overflow: hidden;
+    background-color: #251901; /* mean night-paper tone, until the first tiles arrive */
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+.canvas-container.shanshui.loaded { opacity: 1; }
+.shanshui-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    will-change: transform;
+}
+.shanshui-strip canvas {
+    position: absolute;
+    top: 0;
+}
+
 /* Timeline */
 .timeline {
     position: fixed;
@@ -117,13 +138,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transition: transform 0.6s ease-out;
 }
 .section.visible {
-    opacity: 1;
     transform: translateY(0);
+}
+/* Fade the children, not the section: an ancestor with opacity < 1 becomes the backdrop
+   root, so glass cards would show a flat grey tint (no blur) until the fade finished. */
+.section .sidebar-title,
+.section .section-content > * {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.section.visible .sidebar-title,
+.section.visible .section-content > * {
+    opacity: 1;
 }
 .section-content {
     display: grid;
@@ -200,16 +230,21 @@ body {
 .accent-link { color: #FFFFFF; text-decoration: underline; font-weight: 600; transition: text-shadow 0.3s;}
 .accent-link:hover { text-shadow: 0 0 8px rgba(255,255,255,0.8); }
 
-/* Content Cards */
-.job, .degree, .skill-category, .interests-container {
-    padding: 1.5rem;
+/* Glass surfaces */
+.job, .degree, .skill-category, .interests-container, .summary-text {
     background: rgba(10, 10, 10, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.summary-text { padding: 1.2rem 1.5rem; }
+
+/* Content Cards */
+.job, .degree, .skill-category, .interests-container {
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .interests-container { grid-column: 1 / -1; } /* Span across if needed */
 .job:hover, .degree:hover, .skill-category:hover, .interests-container:hover {

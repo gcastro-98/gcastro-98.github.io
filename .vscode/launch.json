@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // F5: starts the local server, opens the portfolio in Chrome with the
+            // debugger attached (breakpoints in script.js and shanshui/worker.js work),
+            // and stops the server when the debug session ends.
+            "name": "Portfolio (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:8791/",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "serve-portfolio",
+            "postDebugTask": "stop-portfolio-server"
+        }
+    ]
+}

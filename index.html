@@ -51,7 +51,7 @@
                     <p class="summary-text">
                         With a strong foundation in Mathematics, Physics & Data Science; I am very passionate about
                         driving innovation and deploying state-of-the-art solutions to create lasting, positive impact.
-                        Co-founding <a href="https://nebbo-weather.com/" target="_blank" rel="noopener noreferrer"><img src="img/nebbo.png" alt="Nebbo" style="height:1em;vertical-align:middle;"></a> has given me the opportunity to apply my expertise in computing, mathematical
+                        Co-founding <a href="https://nebbo-weather.com/" target="_blank" rel="noopener noreferrer"><img src="img/nebbo.png" alt="Nebbo" class="nebbo-inline" style="height:1em;vertical-align:middle;"></a> has given me the opportunity to apply my expertise in computing, mathematical
                         modelling, AI architecture, and team leadership.
                     </p>
                     <div class="quick-links">
@@ -204,8 +204,7 @@
         </main>
     </div>
 
-    <!-- Three.js Interactive Mesh Gradient Physics -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Fluid background shaders (Three.js is lazy-loaded by script.js when BG_MODE = 'fluid') -->
     <script id="vertexShader" type="x-shader/x-vertex">
         varying vec2 vUv;
         void main() {
